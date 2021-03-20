@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "502201521812",
+    "project_id": "kapival-d0086",
+    "storage_bucket": "kapival-d0086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502201521812:android:df9b5bcb493c8dafb94681",
+        "android_client_info": {
+          "package_name": "com.example.kap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502201521812-1vd1hhnblv8hk8o66um87pnbfd0r94uk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kap",
+            "certificate_hash": "e10458d2507eee1cb869b216d4a95cc58eeb76a6"
+          }
+        },
+        {
+          "client_id": "502201521812-qjsvm34bd6mtbr0q8b02b3ta29vj2c9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7y-zZeEG18_eXCEALPf6xrk2gb0az8Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502201521812-qjsvm34bd6mtbr0q8b02b3ta29vj2c9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

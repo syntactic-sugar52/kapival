@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">502201521812-qjsvm34bd6mtbr0q8b02b3ta29vj2c9h.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">502201521812</string>
+    <string name="google_api_key" translatable="false">AIzaSyC7y-zZeEG18_eXCEALPf6xrk2gb0az8Ps</string>
+    <string name="google_app_id" translatable="false">1:502201521812:android:df9b5bcb493c8dafb94681</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC7y-zZeEG18_eXCEALPf6xrk2gb0az8Ps</string>
+    <string name="google_storage_bucket" translatable="false">kapival-d0086.appspot.com</string>
+    <string name="project_id" translatable="false">kapival-d0086</string>
+</resources>
