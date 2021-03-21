@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:kap/root/root.dart';
+import 'package:kap/states/current_user.dart';
+import 'package:provider/provider.dart';
 
 import 'cards.dart';
 import 'profile.dart';
@@ -37,7 +41,8 @@ class _HomeState extends State<Home> {
       child: SafeArea(
         child: Scaffold(
             key: _scaffoldKey,
-            backgroundColor: Color(0XFFF8F5F1),
+            backgroundColor: Colors.white,
+            // backgroundColor: Color(0XFFF8F5F1),
             resizeToAvoidBottomInset: true,
             appBar: AppBar(
               iconTheme: IconThemeData(color: Colors.black),
@@ -77,10 +82,12 @@ class _HomeState extends State<Home> {
                 Row(
                   children: <Widget>[
                     Container(
-                      child: Text(
-                        isSwitched ? 'Private' : 'Public',
-                        style: TextStyle(color: Colors.black),
-                      ),
+                      child: Text(isSwitched ? 'Private' : 'Public',
+                          style: GoogleFonts.roboto(
+                            color: Colors.black,
+                          )
+                          // TextStyle(color: Colors.black),
+                          ),
                     ),
                     Switch(
                       value: isSwitched,
@@ -94,6 +101,12 @@ class _HomeState extends State<Home> {
                   ],
                 )
               ],
+              bottom: PreferredSize(
+                  child: Container(
+                    color: Color(0XFF145374),
+                    height: 4.0,
+                  ),
+                  preferredSize: Size.fromHeight(4.0)),
             ),
             drawer: Container(
               child: Drawer(
@@ -172,16 +185,16 @@ class _HomeState extends State<Home> {
                       ),
                       onTap: () {},
                     ),
-                    Divider(
-                      color: Colors.grey,
-                    ),
-                    ListTile(
-                      title: Text(
-                        'Currency',
-                        textAlign: TextAlign.center,
-                      ),
-                      onTap: () {},
-                    ),
+                    // Divider(
+                    //   color: Colors.grey,
+                    // ),
+                    // ListTile(
+                    //   title: Text(
+                    //     'Currency',
+                    //     textAlign: TextAlign.center,
+                    //   ),
+                    //   onTap: () {},
+                    // ),
                     Divider(
                       color: Colors.grey,
                     ),
@@ -193,7 +206,17 @@ class _HomeState extends State<Home> {
                         'Log Out',
                         textAlign: TextAlign.center,
                       ),
-                      onTap: () {},
+                      onTap: () async {
+                        CurrentUser _user =
+                            Provider.of<CurrentUser>(context, listen: false);
+                        String _returnString = await _user.onSignOut();
+                        if (_returnString == 'success') {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(builder: (context) => Root()),
+                              (route) => false);
+                        }
+                      },
                     ),
                   ],
                 ),

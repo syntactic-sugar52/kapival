@@ -6,6 +6,8 @@ import 'package:kap/states/current_user.dart';
 
 import 'package:provider/provider.dart';
 
+import 'root/root.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: WelcomeScreen(),
+        home: Root(),
       ),
     );
   }

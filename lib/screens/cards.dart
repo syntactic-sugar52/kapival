@@ -27,6 +27,8 @@ class _CardsState extends State<Cards> {
     Size _size = MediaQuery.of(context).size;
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: Colors.white,
+      // backgroundColor: Color(0XFFF8F5F1),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -46,6 +48,7 @@ class _CardsState extends State<Cards> {
                           (Set<MaterialState> states) {
                             if (states.contains(MaterialState.pressed))
                               return Color(0XFFF8F5F1);
+
                             return Colors.white;
                           },
                         ),
@@ -87,9 +90,11 @@ class _CardsState extends State<Cards> {
             Container(
                 padding: const EdgeInsets.all(10),
                 width: _size.width,
-                height: _size.height * 0.7,
+                height: _size.height * 0.6,
+                color: Colors.transparent,
+                // color: Color(0XFFF8F5F1),
                 child: Card(
-                  elevation: 5,
+                  elevation: 2,
                   child: SingleChildScrollView(
                     physics: NeverScrollableScrollPhysics(),
                     child: Column(
@@ -122,11 +127,11 @@ class _CardsState extends State<Cards> {
                               width: 10,
                             ),
                             CircleAvatar(
-                              radius: 20,
+                              radius: 18,
                             ),
                             Container(
                               padding: const EdgeInsets.all(12.0),
-                              child: Text(_user.getEmail),
+                              child: Text("username"),
                             ),
                           ],
                         ),
@@ -169,28 +174,25 @@ class _CardsState extends State<Cards> {
                             )
                           ],
                         ),
-                        Row(
-                          children: [
-                            Container(
-                                padding: const EdgeInsets.only(
-                                  left: 12,
-                                  top: 12,
-                                ),
-                                child: Text("Short Description :")),
-                            Expanded(
-                              child: Container(
-                                  padding:
-                                      const EdgeInsets.only(left: 8, top: 12),
-                                  child: Text(
-                                    "Will work full time for 3 months",
-                                    softWrap: true,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w700),
-                                  )),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 33),
+                        // Row(
+                        //   children: [
+                        //     Container(
+                        //         padding: const EdgeInsets.only(
+                        //           left: 12,
+                        //           top: 12,
+                        //         ),
+                        //         child: Text("Short Description :")),
+                        //     Container(
+                        //         padding:
+                        //             const EdgeInsets.only(left: 8, top: 12),
+                        //         child: Text(
+                        //           "Will work full time for 3 months ",
+                        //           softWrap: true,
+                        //           style: TextStyle(fontWeight: FontWeight.w700),
+                        //         ))
+                        //   ],
+                        // ),
+                        SizedBox(height: 25),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -201,7 +203,7 @@ class _CardsState extends State<Cards> {
                                     vertical: 1, horizontal: 20),
 
                                 // width: _size.width,
-                                height: 55,
+                                height: 35,
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty
@@ -209,7 +211,7 @@ class _CardsState extends State<Cards> {
                                       (Set<MaterialState> states) {
                                         if (states
                                             .contains(MaterialState.pressed))
-                                          return Colors.green;
+                                          return Color(0XFF387c6d);
                                         return Color(
                                             0xffee6f57); // Use the component's default.
                                       },
@@ -228,20 +230,39 @@ class _CardsState extends State<Cards> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 18,
                         ),
-                        Row(
-                          children: [
-                            Container(
-                                child: IconButton(
-                              icon: Icon(Icons.arrow_upward_sharp),
-                            )),
-                            Container(
-                                child: IconButton(
-                              icon: Icon(Icons.arrow_downward_sharp),
-                            )),
-                          ],
-                        )
+                        // Row(
+                        //   children: [
+                        //     Expanded(
+                        //       child: Container(
+                        //           child: IconButton(
+                        //         icon: Icon(
+                        //           Icons.arrow_upward_sharp,
+                        //           size: 18,
+                        //         ),
+                        //       )),
+                        //     ),
+                        //     Expanded(
+                        //       child: Container(
+                        //           child: IconButton(
+                        //         icon: Icon(
+                        //           Icons.arrow_downward_sharp,
+                        //           size: 18,
+                        //         ),
+                        //       )),
+                        //     ),
+                        //     Expanded(
+                        //       child: Container(
+                        //           child: IconButton(
+                        //         icon: Icon(
+                        //           Icons.comment,
+                        //           size: 18,
+                        //         ),
+                        //       )),
+                        //     ),
+                        //   ],
+                        // )
                       ],
                     ),
                   ),
