@@ -287,12 +287,13 @@ class _ProfileState extends State<Profile> {
                             textAlign: TextAlign.center,
                             style: Theme.of(context)
                                 .textTheme
-                                .subhead
+                                .subhead!
                                 .apply(fontSizeFactor: 0.8)),
                         Padding(
                           padding: EdgeInsets.only(top: 16),
                         ),
                         ElevatedButton(
+                          onPressed: () {},
                           child: Text("View More"),
                         )
                         // Text("Add to Cart",
@@ -343,12 +344,13 @@ class _ProfileState extends State<Profile> {
                             textAlign: TextAlign.center,
                             style: Theme.of(context)
                                 .textTheme
-                                .subhead
+                                .subhead!
                                 .apply(fontSizeFactor: 0.8)),
                         Padding(
                           padding: EdgeInsets.only(top: 16),
                         ),
                         ElevatedButton(
+                          onPressed: () {},
                           child: Text("View More"),
                         )
                         // Text("Add to Cart",

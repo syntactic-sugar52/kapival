@@ -12,14 +12,14 @@ class Users {
   String status;
   Timestamp createdAt;
   Users(
-      {this.uid,
-      this.firstName,
-      this.lastName,
-      this.email,
-      this.createdAt,
-      this.isActive,
-      this.status,
-      this.profilePhoto});
+      {required this.uid,
+      required this.firstName,
+      required this.lastName,
+      required this.email,
+      required this.createdAt,
+      required this.isActive,
+      required this.status,
+      required this.profilePhoto});
 
   Map<String, dynamic> toMap() {
     return {
@@ -35,8 +35,8 @@ class Users {
   }
 
   factory Users.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-    Timestamp _createdAt;
+    // if (map == null) return null;
+    Timestamp? _createdAt;
     if (map['created_at'] is Timestamp) {
       _createdAt = map['created_at'];
     } else if (map['created_at'] is Map) {
@@ -52,7 +52,7 @@ class Users {
       isActive: map['isActive'],
       status: map['status'],
       email: map['email'],
-      createdAt: _createdAt,
+      createdAt: _createdAt!,
     );
   }
 

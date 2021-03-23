@@ -4,7 +4,7 @@
             "outputFile": "/Users/kdang/Desktop/k/kapival/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/kdang/.gradle/caches/transforms-2/files-2.1/5bc6767e703915bebf3f5f7cf8b4cead/core-1.1.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/kdang/.gradle/caches/transforms-2/files-2.1/3620ee38f7bf4e48df27669bd4df8c86/core-1.3.0/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

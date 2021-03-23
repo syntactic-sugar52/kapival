@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kap/root/root.dart';
+import 'package:kap/screens/chat.dart';
+import 'package:kap/screens/search.dart';
+// import 'package:kap/screens/search.dart';
+import 'package:kap/screens/upload.dart';
 import 'package:kap/states/current_user.dart';
 import 'package:provider/provider.dart';
-
+// import 'package:top_modal_sheet/top_modal_sheet.dart';
 import 'cards.dart';
 import 'profile.dart';
 
@@ -13,11 +18,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  var _topModalData = "";
+  TextEditingController _searchController = TextEditingController();
   int currentIndex = 0;
   PageController pageController = PageController();
   bool isSwitched = false;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
+  // final _topModalSheetKey = GlobalKey<TopModalSheetState>();
   void _openDrawer() {
     _scaffoldKey.currentState?.openDrawer();
   }
@@ -32,16 +39,29 @@ class _HomeState extends State<Home> {
     pageController = PageController();
   }
 
+  buildSearch() {
+    return Container(
+      color: Colors.black,
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 2,
+      child: Column(
+        children: [],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
-        return;
+        throw (e) {
+          e.toString();
+        };
       },
       child: SafeArea(
         child: Scaffold(
             key: _scaffoldKey,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.white24,
             // backgroundColor: Color(0XFFF8F5F1),
             resizeToAvoidBottomInset: true,
             appBar: AppBar(
@@ -63,9 +83,125 @@ class _HomeState extends State<Home> {
                           size: 20,
                           color: Colors.black,
                         ),
-                        // onPressed: _onClickNotification,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Search()));
+                        },
+                        //     var value = await Navigator.of(context)
+                        //         .push<List<int>>(PageRouteBuilder(
+                        //             pageBuilder: (_, __, ___) {
+                        //               return TopModalSheet(
+                        //                 key: _topModalSheetKey,
+                        //                 child: Container(
+                        //                     color: Color(0XFFf6f5f5),
+                        //                     // padding: const EdgeInsets.all(20),
+                        //                     height: MediaQuery.of(context)
+                        //                             .size
+                        //                             .height *
+                        //                         .6,
+                        //                     child: Column(
+                        //                       children: [
+                        //                         SizedBox(
+                        //                           height: 20,
+                        //                         ),
+                        //                         Container(
+                        //                           width: MediaQuery.of(context)
+                        //                                   .size
+                        //                                   .width *
+                        //                               0.9,
+                        //                           child: Row(
+                        //                             mainAxisSize:
+                        //                                 MainAxisSize.max,
+                        //                             mainAxisAlignment:
+                        //                                 MainAxisAlignment
+                        //                                     .spaceEvenly,
+                        //                             crossAxisAlignment:
+                        //                                 CrossAxisAlignment.center,
+                        //                             children: [
+                        //                               Expanded(
+                        //                                 child: TextField(
+                        //                                   controller:
+                        //                                       _searchController,
+                        //                                   decoration: InputDecoration(
+                        //                                       hintText:
+                        //                                           "Enter Search Keyword",
+                        //                                       hintStyle:
+                        //                                           TextStyle(
+                        //                                               fontSize:
+                        //                                                   12)),
+                        //                                 ),
+                        //                               ),
+                        //                               Row(
+                        //                                 children: [
+                        //                                   Container(
+                        //                                     padding:
+                        //                                         const EdgeInsets
+                        //                                                 .only(
+                        //                                             top: 38,
+                        //                                             left: 10),
+                        //                                     child: TextButton(
+                        //                                         onPressed: () {
+                        //                                           _topModalSheetKey
+                        //                                               .currentState!
+                        //                                               .onBackPressed(
+                        //                                                   data: [
+                        //                                                 1,
+                        //                                                 2,
+                        //                                                 3
+                        //                                               ]);
+                        //                                         },
+                        //                                         child: Text(
+                        //                                           ("Close"),
+                        //                                           style: GoogleFonts.roboto(
+                        //                                               color: Colors
+                        //                                                   .black,
+                        //                                               decoration:
+                        //                                                   TextDecoration
+                        //                                                       .underline),
+                        //                                         )),
+                        //                                   )
+                        //                                 ],
+                        //                               ),
+                        //                             ],
+                        //                           ),
+                        //                         ),
+                        //                         Row(
+                        //                           children: [
+                        //                             Container(
+                        //                               padding:
+                        //                                   const EdgeInsets.all(
+                        //                                       20),
+                        //                               child: Text(
+                        //                                   "TOP SEARCH TERMS",
+                        //                                   style:
+                        //                                       GoogleFonts.roboto(
+                        //                                           color: Colors
+                        //                                               .black,
+                        //                                           fontWeight:
+                        //                                               FontWeight
+                        //                                                   .w400)),
+                        //                             )
+                        //                           ],
+                        //                         )
+                        //                       ],
+                        //                     )),
+                        //               );
+                        //             },
+                        //             opaque: false));
+
+                        //     if (value != null) {
+                        //       setState(() {
+                        //         _topModalData = "$value";
+                        //       });
+                        //     }
+                        //   },
+
+                        //   // onPressed: _onClickNotification,
                       ),
                     ],
+                    //  }
                   ),
                   Expanded(
                     child: Center(
@@ -226,8 +362,8 @@ class _HomeState extends State<Home> {
                 controller: pageController,
                 children: <Widget>[
                   Container(child: SafeArea(child: Cards())),
-                  Container(child: SafeArea(child: Text('Messages'))),
-                  Container(child: SafeArea(child: Text('Upload'))),
+                  Container(child: SafeArea(child: Chat())),
+                  Container(child: SafeArea(child: CameraApp())),
                   Container(child: SafeArea(child: Text('Notifications'))),
                   Container(child: SafeArea(child: Profile())),
                 ],
@@ -252,7 +388,7 @@ class _HomeState extends State<Home> {
           pageController.animateToPage(
             index,
             duration: Duration(
-              milliseconds: 200,
+              milliseconds: 30,
             ),
             curve: Curves.easeIn,
           );

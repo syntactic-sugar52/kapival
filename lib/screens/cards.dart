@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-
+import 'package:better_player/better_player.dart';
 import '../states/current_user.dart';
 
 class Cards extends StatefulWidget {
-  final Function pressed;
-  Cards({this.pressed});
   @override
   _CardsState createState() => _CardsState();
 }
 
 class _CardsState extends State<Cards> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
+  BetterPlayerController? _betterPlayerController;
   void _openEndDrawer() {
     _scaffoldKey.currentState?.openEndDrawer();
   }
@@ -22,13 +20,24 @@ class _CardsState extends State<Cards> {
     Navigator.of(context).pop();
   }
 
+  @override
+  void initState() {
+    super.initState();
+    BetterPlayerDataSource betterPlayerDataSource = BetterPlayerDataSource(
+        BetterPlayerDataSourceType.network,
+        "https://www.youtube.com/watch?v=FdECUWfjwwE");
+    _betterPlayerController = BetterPlayerController(
+        BetterPlayerConfiguration(),
+        betterPlayerDataSource: betterPlayerDataSource);
+  }
+
   buildCards(context) {
     CurrentUser _user = Provider.of<CurrentUser>(context, listen: false);
     Size _size = MediaQuery.of(context).size;
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Colors.white,
-      // backgroundColor: Color(0XFFF8F5F1),
+      // backgroundColor: Colors.white24,
+      backgroundColor: Color(0XFFF8F5F1),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -92,6 +101,7 @@ class _CardsState extends State<Cards> {
                 width: _size.width,
                 height: _size.height * 0.6,
                 color: Colors.transparent,
+                // color: Colors.white24,
                 // color: Color(0XFFF8F5F1),
                 child: Card(
                   elevation: 2,
@@ -102,17 +112,22 @@ class _CardsState extends State<Cards> {
                         Row(
                           children: [
                             Expanded(
-                              child: Container(
-                                  // padding: const EdgeInsets.all(8),
-                                  height: _size.height * 0.3,
-                                  // width: _size.width * 0.93,
-                                  decoration: new BoxDecoration(
-                                    image: new DecorationImage(
-                                      image: NetworkImage(
-                                          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bandrbands.com%2Fimages%2Fproducts%2Fdetail%2F20mm-Cognac-Italian-Vintage-Leather-Nato-Watch-Band-Strap-Tudor-Blackbay-58-Watch.jpg&f=1&nofb=1'),
-                                      fit: BoxFit.cover,
-                                    ),
-                                  )),
+                              child: AspectRatio(
+                                aspectRatio: 16 / 9,
+                                child: BetterPlayer(
+                                    controller: _betterPlayerController!),
+                              ),
+                              // child: Container(
+                              //     // padding: const EdgeInsets.all(8),
+                              //     height: _size.height * 0.3,
+                              //     // width: _size.width * 0.93,
+                              //     decoration: new BoxDecoration(
+                              //       image: new DecorationImage(
+                              //         image: NetworkImage(
+                              //             'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bandrbands.com%2Fimages%2Fproducts%2Fdetail%2F20mm-Cognac-Italian-Vintage-Leather-Nato-Watch-Band-Strap-Tudor-Blackbay-58-Watch.jpg&f=1&nofb=1'),
+                              //         fit: BoxFit.cover,
+                              //       ),
+                              //     )),
                             ),
                           ],
                         ),

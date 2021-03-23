@@ -29,7 +29,7 @@ class _RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    Widget retVal;
+    Widget? retVal;
 
     switch (_authStatus) {
       case AuthStatus.notLoggedIn:
@@ -40,6 +40,6 @@ class _RootState extends State<Root> {
         break;
       default:
     }
-    return retVal;
+    return retVal!;
   }
 }

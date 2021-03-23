@@ -20,17 +20,25 @@ class Database {
     return retVal;
   }
 
-  Future<Users> getUserInfo(String uid) async {
-    Users retVal = Users();
+  Future<Users> getUserInfo(String? uid) async {
+    Users retVal = Users(
+        createdAt: Timestamp.now(),
+        email: '',
+        firstName: '',
+        isActive: '',
+        lastName: '',
+        profilePhoto: '',
+        status: '',
+        uid: '');
     try {
       DocumentSnapshot _doc =
           await _firestore.collection('users').doc(uid).get();
-      retVal.uid = uid;
-      retVal.firstName = _doc.data()["firstName"];
-      retVal.lastName = _doc.data()["lastName"];
-      retVal.email = _doc.data()["email"];
-      retVal.profilePhoto = _doc.data()["profilePhoto"];
-      retVal.status = _doc.data()["status"];
+      retVal.uid = uid!;
+      retVal.firstName = _doc.data()!["firstName"];
+      retVal.lastName = _doc.data()!["lastName"];
+      retVal.email = _doc.data()!["email"];
+      retVal.profilePhoto = _doc.data()!["profilePhoto"];
+      retVal.status = _doc.data()!["status"];
     } catch (e) {
       print(e);
     }
