@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:kap/auth/auth_controller.dart';
+import 'package:kap/auth/welcome_screen.dart';
+import 'package:kap/dashboard/dahsboard.dart';
+import 'package:kap/states/current_user.dart';
 import 'package:provider/provider.dart';
-
-import '../screens/home.dart';
-import '../states/current_user.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -14,15 +15,17 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-
   void _logInUser(String email, String password, BuildContext context) async {
     CurrentUser _user = Provider.of<CurrentUser>(context, listen: false);
 
     try {
       String _returnString = await _user.loginUser(email, password);
       if (_returnString == "success") {
-        Navigator.pushAndRemoveUntil(context,
-            MaterialPageRoute(builder: (context) => Home()), (route) => false);
+        _onLoading();
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => Dashboard()),
+            (route) => false);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -34,6 +37,38 @@ class _LoginState extends State<Login> {
     } catch (e) {
       print(e);
     }
+  }
+
+  void _onLoading() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(
+          child: Card(
+            color: Colors.white,
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.3,
+              width: MediaQuery.of(context).size.height * 0.3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    child: CircularProgressIndicator(),
+                  ),
+                  Container(
+                      margin: const EdgeInsets.only(top: 25.0),
+                      child: Text(
+                        "Signing in..",
+                        style: TextStyle(color: Colors.black),
+                      )),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 
   buildSignIn() {

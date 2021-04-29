@@ -5,66 +5,69 @@ import 'package:flutter/material.dart';
 
 class Referral extends ChangeNotifier {
   String referralId;
-  String referralName;
-  String what;
+  String about;
   String price; //optional
-  String referralDescription;
-  Map referralReviews;
-  String ownerId;
-  String ownerName;
-  String referralCategory;
-  String referralDetails;
-  String referralComments;
-  String referralImage;
-  String referralVideoUrl;
-  String forWhat;
-  bool upvote;
-  bool downvote;
+  String description;
+  Map reviews;
+  String postId;
+  bool isPrivate;
+  String category;
+  String firstName;
+  String lastName;
+  String userUid;
+  Map comments;
+
+  String imageUrl;
+  String lookingFor;
+  int upvote;
+  int downvote;
   Timestamp createdAt;
 
   Referral(
-      {required this.price,
-      required this.forWhat,
-      required this.referralCategory,
-      required this.referralComments,
-      required this.ownerId,
-      required this.ownerName,
-      required this.referralDescription,
-      required this.referralDetails,
-      required this.referralId,
-      required this.referralImage,
-      required this.referralName,
-      required this.downvote,
-      required this.upvote,
-      required this.referralReviews,
-      required this.referralVideoUrl,
-      required this.what,
-      required this.createdAt});
+      {this.price,
+      this.lookingFor,
+      this.category,
+      this.comments,
+      this.postId,
+      this.description,
+      this.referralId,
+      this.firstName,
+      this.lastName,
+      this.userUid,
+      this.about,
+      this.downvote,
+      this.upvote,
+      this.reviews,
+      this.isPrivate,
+      this.imageUrl,
+      this.createdAt});
 
   Map<String, dynamic> toMap() {
     return {
       'referralId': referralId,
-      'referralName': referralName,
-      'what': what,
-      'referral_image': referralImage,
+      'about': about,
+      'looking_for': lookingFor,
       'price': price,
-      'referral_description': referralDescription,
-      'referral_reviews': referralReviews,
-      'owner_id': ownerId,
+      'description': description,
+      'reviews': reviews,
+      'post_id': postId,
+      'user_uid': userUid,
+      'first_name': firstName,
+      'last_name': lastName,
       'upvote': upvote,
       'downvote': downvote,
-      'referral_comments': referralComments,
-      'referral_category': referralCategory,
-      'referral_details': referralDetails,
+      'isPrivate': isPrivate,
+      'comments': comments,
+      'category': category,
       'created_at': createdAt,
-      'referral_video_url': referralVideoUrl,
-      'for_what': forWhat
+      'image_url': imageUrl,
     };
   }
 
   factory Referral.fromMap(Map<String, dynamic> map) {
-    // if (map == null) return null;
-    Timestamp? _createdAt;
+    Timestamp _createdAt;
+    if (map == null) return null;
+
     if (map['created_at'] is Timestamp) {
       _createdAt = map['created_at'];
     } else if (map['created_at'] is Map) {
@@ -74,25 +77,42 @@ class Referral extends ChangeNotifier {
 
     return Referral(
       referralId: map['referral_id'],
-      referralName: map['referral_name'],
-      referralDetails: map['referral_details'],
-      referralImage: map['referral_image'],
-      what: map['about'],
+      about: map['about'],
+      lookingFor: map['looking_for'],
       price: map['price'],
-      referralDescription: map['referral_description'],
-      referralCategory: map['referral_category'],
+      description: map['description'],
+      category: map['category'],
+      isPrivate: map['is_private'],
+      firstName: map['first_name'],
+      lastName: map['last_name'],
+      userUid: map['user_uid'],
       upvote: map['upvote'],
       downvote: map['downvote'],
-      referralReviews: map['referral_reviews'],
-      ownerId: map['owner_id'],
-      ownerName: map['owner_name'],
-      referralComments: map['referral_comments'],
-      referralVideoUrl: map['referral_video_url'],
-      forWhat: map['for_what'],
-      createdAt: _createdAt!,
+      reviews: map['reviews'],
+      postId: map['post_id'],
+      comments: map['comments'],
+      imageUrl: map['image_url'],
+      createdAt: _createdAt,
     );
   }
-
+  factory Referral.fromDocument(DocumentSnapshot doc) {
+    return Referral(
+        referralId: doc.data()['referral_id'],
+        postId: doc.data()['post_id'],
+        about: doc.data()['about'],
+        description: doc.data()['description'],
+        isPrivate: doc.data()['is_private'],
+        firstName: doc.data()['first_name'],
+        lastName: doc.data()['last_name'],
+        userUid: doc.data()['user_uid'],
+        category: doc.data()['category'],
+        imageUrl: doc.data()['image_url'],
+        comments: doc.data()['comments'],
+        upvote: doc.data()['upvote'],
+        downvote: doc.data()['downvote'],
+        lookingFor: doc.data()['looking_for'],
+        createdAt: doc.data()['createdAt']);
+  }
   String toJson() => json.encode(toMap());
 
   factory Referral.fromJson(String source) =>

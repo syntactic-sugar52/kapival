@@ -1,0 +1,2 @@
+io/agora/agorartm/BuildConfig.java
+ io.agora.agorartm.BuildConfig

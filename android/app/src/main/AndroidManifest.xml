@@ -1,7 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kap">
+
+
+
+<!-- </manifest> -->
+   
+
    <application
+     android:name="io.flutter.app.FlutterApplication"
         android:label="kap"
+        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -37,5 +45,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+<activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 </manifest>

@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-9        android:targetSdkVersion="30" />
+9        android:targetSdkVersion="29" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
@@ -15,327 +15,415 @@
 14-->/Users/kdang/Desktop/k/kapival/android/app/src/debug/AndroidManifest.xml:6:5-66
 14-->/Users/kdang/Desktop/k/kapival/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
-15-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
-16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
-16-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
-17    <uses-permission android:name="android.permission.CAMERA" />
-17-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-65
-17-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-62
-18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-18-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
-18-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
-19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:24:5-79
-19-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:24:22-76
-20    <uses-permission android:name="android.permission.WAKE_LOCK" />
-20-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:24:5-68
-20-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:24:22-65
-21    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-21-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
-21-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:22-107
-22
-23    <application
-23-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:3:4-40:19
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.3.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3620ee38f7bf4e48df27669bd4df8c86/core-1.3.0/AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:5:9-43
-27        android:label="kap" >
-27-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:4:9-28
-28        <activity
-28-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:6:9-34:20
-29            android:name="com.example.kap.MainActivity"
-29-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:7:13-41
-30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-30-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:10:13-163
-31            android:hardwareAccelerated="true"
-31-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:11:13-47
-32            android:launchMode="singleTop"
-32-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:8:13-43
-33            android:theme="@style/LaunchTheme"
-33-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:9:13-47
-34            android:windowSoftInputMode="adjustResize" >
-34-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:12:13-55
-35
-36            <!--
-37                 Specifies an Android theme to apply to this Activity as soon as
-38                 the Android process has started. This theme is visible to the user
-39                 while the Flutter UI initializes. After that, this theme continues
-40                 to determine the Window background behind the Flutter UI.
-41            -->
-42            <meta-data
-42-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:17:13-20:17
-43                android:name="io.flutter.embedding.android.NormalTheme"
-43-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:18:15-70
-44                android:resource="@style/NormalTheme" />
-44-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:19:15-52
-45            <!--
-46                 Displays an Android View that continues showing the launch screen
-47                 Drawable until Flutter paints its first frame, then this splash
-48                 screen fades out. A splash screen is useful to avoid any visual
-49                 gap between the end of Android's launch screen and the painting of
-50                 Flutter's first frame.
-51            -->
-52            <meta-data
-52-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:26:13-29:17
-53                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-53-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:27:15-79
-54                android:resource="@drawable/launch_background" />
-54-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:28:15-61
-55
-56            <intent-filter>
-56-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:30:13-33:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:31:17-68
-57-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:31:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:32:17-76
-59-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:32:27-74
-60            </intent-filter>
-61        </activity>
-62        <!--
-63             Don't delete the meta-data below.
-64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-65        -->
-66        <meta-data
-66-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:37:9-39:33
-67            android:name="flutterEmbedding"
-67-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:38:13-44
-68            android:value="2" />
-68-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:39:13-30
-69
-70        <provider
-70-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
-71            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-71-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
-72            android:authorities="com.example.kap.flutter.image_provider"
-72-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
-73            android:exported="false"
-73-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
-74            android:grantUriPermissions="true" >
-74-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
-75            <meta-data
-75-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
-76                android:name="android.support.FILE_PROVIDER_PATHS"
-76-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
-77                android:resource="@xml/flutter_image_picker_file_paths" />
-77-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
-78        </provider>
-79
-80        <service
-80-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-81            android:name="com.google.firebase.components.ComponentDiscoveryService"
-81-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
-82            android:directBootAware="true"
-82-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
-83            android:exported="false" >
-83-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:76:13-37
-84            <meta-data
-84-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-85-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
-86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-87            <meta-data
-87-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-88-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
-89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-90            <meta-data
-90-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-91-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
-92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+15-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+15-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+16
+17    <queries>
+17-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-15:15
+18        <intent>
+18-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-14:18
+19            <action android:name="android.intent.action.GET_CONTENT" />
+19-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-72
+19-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:21-69
+20
+21            <data android:mimeType="*/*" />
+21-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-44
+21-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:19-41
+22        </intent>
+23        <intent>
+23-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-10:18
+24            <action android:name="android.support.customtabs.action.CustomTabsService" />
+24-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-90
+24-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:9:21-87
+25        </intent>
+26    </queries>
+27
+28    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+28-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+28-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+29    <uses-permission android:name="android.permission.CAMERA" />
+29-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-65
+29-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-62
+30    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+30-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
+30-->[:camera] /Users/kdang/Desktop/k/kapival/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:24:5-79
+31-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:24:22-76
+32    <uses-permission android:name="android.permission.WAKE_LOCK" />
+32-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:24:5-68
+32-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:24:22-65
+33    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- </manifest> -->
+33-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
+33-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:22-107
+34    <application
+34-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:9:4-52:19
+35        android:name="io.flutter.app.FlutterApplication"
+35-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:10:6-54
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.3.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3620ee38f7bf4e48df27669bd4df8c86/core-1.3.0/AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:icon="@mipmap/ic_launcher"
+38-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:13:9-43
+39        android:label="kap"
+39-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:11:9-28
+40        android:requestLegacyExternalStorage="true" >
+40-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:12:9-52
+41        <activity
+41-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:14:9-42:20
+42            android:name="com.example.kap.MainActivity"
+42-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:15:13-41
+43            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+43-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:18:13-163
+44            android:hardwareAccelerated="true"
+44-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:19:13-47
+45            android:launchMode="singleTop"
+45-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:16:13-43
+46            android:theme="@style/LaunchTheme"
+46-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:17:13-47
+47            android:windowSoftInputMode="adjustResize" >
+47-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:20:13-55
+48
+49            <!--
+50                 Specifies an Android theme to apply to this Activity as soon as
+51                 the Android process has started. This theme is visible to the user
+52                 while the Flutter UI initializes. After that, this theme continues
+53                 to determine the Window background behind the Flutter UI.
+54            -->
+55            <meta-data
+55-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:25:13-28:17
+56                android:name="io.flutter.embedding.android.NormalTheme"
+56-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:26:15-70
+57                android:resource="@style/NormalTheme" />
+57-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:27:15-52
+58            <!--
+59                 Displays an Android View that continues showing the launch screen
+60                 Drawable until Flutter paints its first frame, then this splash
+61                 screen fades out. A splash screen is useful to avoid any visual
+62                 gap between the end of Android's launch screen and the painting of
+63                 Flutter's first frame.
+64            -->
+65            <meta-data
+65-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:34:13-37:17
+66                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+66-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:35:15-79
+67                android:resource="@drawable/launch_background" />
+67-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:36:15-61
+68
+69            <intent-filter>
+69-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:38:13-41:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:39:17-68
+70-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:39:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:40:17-76
+72-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:40:27-74
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79        <meta-data
+79-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:45:9-47:33
+80            android:name="flutterEmbedding"
+80-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:46:13-44
+81            android:value="2" />
+81-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:47:13-30
+82
+83        <activity
+83-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:48:1-51:71
+84            android:name="com.yalantis.ucrop.UCropActivity"
+84-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:49:13-60
+85            android:screenOrientation="portrait"
+85-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:50:13-49
+86            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+86-->/Users/kdang/Desktop/k/kapival/android/app/src/main/AndroidManifest.xml:51:13-69
+87
+88        <provider
+88-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+89            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+89-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+90            android:authorities="com.example.kap.flutter.image_provider"
+90-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+91            android:exported="false"
+91-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+92            android:grantUriPermissions="true" >
+92-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
 93            <meta-data
-93-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:77:13-79:85
-94                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-94-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:78:17-109
-95                android:value="com.google.firebase.components.ComponentRegistrar" />
-95-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:79:17-82
-96            <meta-data
-96-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:20:13-22:85
-97                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-97-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:21:17-111
-98                android:value="com.google.firebase.components.ComponentRegistrar" />
-98-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:22:17-82
-99            <meta-data
-99-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:30:13-32:85
-100                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-100-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:31:17-139
-101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:32:17-82
+93-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+94                android:name="android.support.FILE_PROVIDER_PATHS"
+94-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+95                android:resource="@xml/flutter_image_picker_file_paths" />
+95-->[:image_picker] /Users/kdang/Desktop/k/kapival/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+96        </provider>
+97
+98        <service
+98-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+99            android:name="com.google.firebase.components.ComponentDiscoveryService"
+99-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+100            android:directBootAware="true"
+100-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+101            android:exported="false" >
+101-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:76:13-37
 102            <meta-data
-102-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
-103                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-103-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+102-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+103-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
 104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
-105            <!--
-106                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-107                clients to use it as well, by defining this registrar in their own core/common library.
-108            -->
-109            <meta-data
-109-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
-110                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-110-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
-112        </service>
-113
-114        <activity
-114-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:27:9-44:20
-115            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-115-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:28:13-80
-116            android:excludeFromRecents="true"
-116-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:29:13-46
-117            android:exported="true"
-117-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:30:13-36
-118            android:launchMode="singleTask"
-118-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:31:13-44
-119            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-119-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:32:13-72
-120            <intent-filter>
-120-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:33:13-43:29
-121                <action android:name="android.intent.action.VIEW" />
-121-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:17-69
-121-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:25-66
-122
-123                <category android:name="android.intent.category.DEFAULT" />
-123-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
-123-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
-124                <category android:name="android.intent.category.BROWSABLE" />
-124-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:17-78
-124-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:27-75
-125
-126                <data
-126-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:39:17-42:51
-127                    android:host="firebase.auth"
-127-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:40:21-49
-128                    android:path="/"
-128-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:41:21-37
-129                    android:scheme="genericidp" />
-129-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:42:21-48
-130            </intent-filter>
-131        </activity>
-132        <activity
-132-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:45:9-62:20
-133            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-133-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:46:13-79
-134            android:excludeFromRecents="true"
-134-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:47:13-46
-135            android:exported="true"
-135-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:48:13-36
-136            android:launchMode="singleTask"
-136-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:49:13-44
-137            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-137-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:50:13-72
-138            <intent-filter>
-138-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:51:13-61:29
-139                <action android:name="android.intent.action.VIEW" />
-139-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:17-69
-139-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:25-66
-140
-141                <category android:name="android.intent.category.DEFAULT" />
-141-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
-141-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
-142                <category android:name="android.intent.category.BROWSABLE" />
-142-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:17-78
-142-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:27-75
-143
-144                <data
-144-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:39:17-42:51
-145                    android:host="firebase.auth"
-145-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:40:21-49
-146                    android:path="/"
-146-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:41:21-37
-147                    android:scheme="recaptcha" />
-147-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:42:21-48
-148            </intent-filter>
-149        </activity>
-150
-151        <service
-151-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:64:9-73:19
-152            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-152-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:65:13-101
-153            android:enabled="true"
-153-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:66:13-35
-154            android:exported="false" >
-154-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:67:13-37
-155            <intent-filter>
-155-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:68:13-72:29
-156                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-156-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:69:17-89
-156-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:69:25-86
-157
-158                <category android:name="android.intent.category.DEFAULT" />
-158-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
-158-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
-159            </intent-filter>
-160        </service>
-161
-162        <provider
-162-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
-163            android:name="com.google.firebase.provider.FirebaseInitProvider"
-163-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
-164            android:authorities="com.example.kap.firebaseinitprovider"
-164-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
-165            android:directBootAware="true"
-165-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
-166            android:exported="false"
-166-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
-167            android:initOrder="100" />
-167-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
-168
-169        <activity
-169-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
-170            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-170-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
-171            android:exported="false"
-171-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
-172            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-172-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
-173
-174        <receiver
-174-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:29:9-33:20
-175            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-175-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:30:13-85
-176            android:enabled="true"
-176-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:31:13-35
-177            android:exported="false" >
-177-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:32:13-37
-178        </receiver>
-179
-180        <service
-180-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:35:9-38:40
-181            android:name="com.google.android.gms.measurement.AppMeasurementService"
-181-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:36:13-84
-182            android:enabled="true"
-182-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:37:13-35
-183            android:exported="false" />
-183-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:38:13-37
-184        <service
-184-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:39:9-43:72
-185            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-185-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:40:13-87
-186            android:enabled="true"
-186-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:41:13-35
-187            android:exported="false"
-187-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:42:13-37
-188            android:permission="android.permission.BIND_JOB_SERVICE" />
-188-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:43:13-69
-189
-190        <meta-data
-190-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
-191            android:name="com.google.android.gms.version"
-191-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
-192            android:value="@integer/google_play_services_version" />
-192-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
-193    </application>
-194
-195</manifest>
+104-->[:cloud_firestore] /Users/kdang/Desktop/k/kapival/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+105            <meta-data
+105-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+106                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+106-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[:firebase_auth] /Users/kdang/Desktop/k/kapival/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+108            <meta-data
+108-->[:firebase_storage] /Users/kdang/Desktop/k/kapival/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+109                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+109-->[:firebase_storage] /Users/kdang/Desktop/k/kapival/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[:firebase_storage] /Users/kdang/Desktop/k/kapival/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+111            <meta-data
+111-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+112                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+112-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[:firebase_core] /Users/kdang/Desktop/k/kapival/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:77:13-79:85
+115                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+115-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:78:17-109
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:79:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:20:13-22:85
+118                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+118-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:21:17-111
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-firestore:22.1.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/cad0c91c2468427814a5f7dfc7992166/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:22:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-storage:19.2.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/4125870e6fc6b894be7f53c607f38f29/jetified-firebase-storage-19.2.1/AndroidManifest.xml:33:13-35:85
+121                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+121-->[com.google.firebase:firebase-storage:19.2.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/4125870e6fc6b894be7f53c607f38f29/jetified-firebase-storage-19.2.1/AndroidManifest.xml:34:17-107
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-storage:19.2.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/4125870e6fc6b894be7f53c607f38f29/jetified-firebase-storage-19.2.1/AndroidManifest.xml:35:17-82
+123            <meta-data
+123-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:30:13-32:85
+124                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+124-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:31:17-139
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/c6b5ef8297469d27b23b91055a9ca5f4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:32:17-82
+126            <meta-data
+126-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
+127                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+127-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+128                android:value="com.google.firebase.components.ComponentRegistrar" />
+128-->[com.google.firebase:firebase-installations:16.3.5] /Users/kdang/.gradle/caches/transforms-2/files-2.1/0b765956ccf0830178ab8b4ddf784063/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
+129            <!--
+130                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+131                clients to use it as well, by defining this registrar in their own core/common library.
+132            -->
+133            <meta-data
+133-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+134                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+134-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+135                android:value="com.google.firebase.components.ComponentRegistrar" />
+135-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+136        </service>
+137
+138        <activity
+138-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-17:47
+139            android:name="com.pichillilorenzo.flutter_inappwebview.in_app_browser.InAppBrowserActivity"
+139-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-104
+140            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+140-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-137
+141            android:theme="@style/AppTheme" />
+141-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-44
+142        <activity
+142-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-20:55
+143            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivity"
+143-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-112
+144            android:theme="@style/ThemeTransparent" />
+144-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-52
+145
+146        <receiver android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ActionBroadcastReceiver" />
+146-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-120
+146-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:22:19-117
+147
+148        <meta-data
+148-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:24:9-26:36
+149            android:name="io.flutter.embedded_views_preview"
+149-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-61
+150            android:value="true" />
+150-->[:flutter_inappwebview] /Users/kdang/Desktop/k/kapival/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-33
+151
+152        <activity
+152-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:27:9-44:20
+153            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+153-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:28:13-80
+154            android:excludeFromRecents="true"
+154-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:29:13-46
+155            android:exported="true"
+155-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:30:13-36
+156            android:launchMode="singleTask"
+156-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:31:13-44
+157            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+157-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:32:13-72
+158            <intent-filter>
+158-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:33:13-43:29
+159                <action android:name="android.intent.action.VIEW" />
+159-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:17-69
+159-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:25-66
+160
+161                <category android:name="android.intent.category.DEFAULT" />
+161-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
+161-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
+162                <category android:name="android.intent.category.BROWSABLE" />
+162-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:17-78
+162-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:27-75
+163
+164                <data
+164-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-44
+165                    android:host="firebase.auth"
+166                    android:path="/"
+167                    android:scheme="genericidp" />
+168            </intent-filter>
+169        </activity>
+170        <activity
+170-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:45:9-62:20
+171            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+171-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:46:13-79
+172            android:excludeFromRecents="true"
+172-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:47:13-46
+173            android:exported="true"
+173-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:48:13-36
+174            android:launchMode="singleTask"
+174-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:49:13-44
+175            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+175-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:50:13-72
+176            <intent-filter>
+176-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:51:13-61:29
+177                <action android:name="android.intent.action.VIEW" />
+177-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:17-69
+177-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:34:25-66
+178
+179                <category android:name="android.intent.category.DEFAULT" />
+179-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
+179-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
+180                <category android:name="android.intent.category.BROWSABLE" />
+180-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:17-78
+180-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:37:27-75
+181
+182                <data
+182-->[:file_picker] /Users/kdang/Desktop/k/kapival/build/file_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-44
+183                    android:host="firebase.auth"
+184                    android:path="/"
+185                    android:scheme="recaptcha" />
+186            </intent-filter>
+187        </activity>
+188
+189        <service
+189-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:64:9-73:19
+190            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+190-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:65:13-101
+191            android:enabled="true"
+191-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:66:13-35
+192            android:exported="false" >
+192-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:67:13-37
+193            <intent-filter>
+193-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:68:13-72:29
+194                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+194-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:69:17-89
+194-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:69:25-86
+195
+196                <category android:name="android.intent.category.DEFAULT" />
+196-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:17-76
+196-->[com.google.firebase:firebase-auth:20.0.3] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b9a48ae9aec0205c2b5ec98fb2715923/jetified-firebase-auth-20.0.3/AndroidManifest.xml:36:27-73
+197            </intent-filter>
+198        </service>
+199
+200        <provider
+200-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+201            android:name="com.google.firebase.provider.FirebaseInitProvider"
+201-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+202            android:authorities="com.example.kap.firebaseinitprovider"
+202-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+203            android:directBootAware="true"
+203-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+204            android:exported="false"
+204-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+205            android:initOrder="100" />
+205-->[com.google.firebase:firebase-common:19.5.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/b3465a29948ff4169da5e04d963f5e27/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+206
+207        <activity
+207-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
+208            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+208-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
+209            android:excludeFromRecents="true"
+209-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
+210            android:exported="false"
+210-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
+211            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+211-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
+212        <!--
+213            Service handling Google Sign-In user revocation. For apps that do not integrate with
+214            Google Sign-In, this service will never be started.
+215        -->
+216        <service
+216-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
+217            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+217-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
+218            android:exported="true"
+218-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
+219            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+219-->[com.google.android.gms:play-services-auth:16.0.1] /Users/kdang/.gradle/caches/transforms-2/files-2.1/3029ca322dce81d588c642d8d0997ad6/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
+220
+221        <activity
+221-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+222            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+222-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+223            android:exported="false"
+223-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+224            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+224-->[com.google.android.gms:play-services-base:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/9ceed95833256bf8e8f205dfd77a6d00/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+225
+226        <receiver
+226-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:29:9-33:20
+227            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+227-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:30:13-85
+228            android:enabled="true"
+228-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:31:13-35
+229            android:exported="false" >
+229-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:32:13-37
+230        </receiver>
+231
+232        <service
+232-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:35:9-38:40
+233            android:name="com.google.android.gms.measurement.AppMeasurementService"
+233-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:36:13-84
+234            android:enabled="true"
+234-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:37:13-35
+235            android:exported="false" />
+235-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:38:13-37
+236        <service
+236-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:39:9-43:72
+237            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+237-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:40:13-87
+238            android:enabled="true"
+238-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:41:13-35
+239            android:exported="false"
+239-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:42:13-37
+240            android:permission="android.permission.BIND_JOB_SERVICE" />
+240-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/kdang/.gradle/caches/transforms-2/files-2.1/8262900c7c97635c631712f82608ae40/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:43:13-69
+241
+242        <meta-data
+242-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
+243            android:name="com.google.android.gms.version"
+243-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
+244            android:value="@integer/google_play_services_version" />
+244-->[com.google.android.gms:play-services-basement:17.1.0] /Users/kdang/.gradle/caches/transforms-2/files-2.1/549e3b8964e71b26e74a8a46d4ccd1ac/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
+245    </application>
+246
+247</manifest>

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kap/auth/welcome_screen.dart';
-import 'package:kap/screens/home.dart';
+import 'package:kap/dashboard/dahsboard.dart';
+import 'package:kap/onboarding/welcome_screen.dart';
+import 'package:kap/services/database.dart';
+
 import 'package:kap/states/current_user.dart';
 import 'package:provider/provider.dart';
 
@@ -20,6 +23,7 @@ class _RootState extends State<Root> {
     super.didChangeDependencies();
     CurrentUser _user = Provider.of<CurrentUser>(context, listen: false);
     String returnString = await _user.onStartUp();
+
     if (returnString == 'success') {
       setState(() {
         _authStatus = AuthStatus.loggedIn;
@@ -29,17 +33,17 @@ class _RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    Widget? retVal;
+    Widget retVal;
 
     switch (_authStatus) {
       case AuthStatus.notLoggedIn:
-        retVal = WelcomeScreen();
+        retVal = WelcomeScreens();
         break;
       case AuthStatus.loggedIn:
-        retVal = Home();
+        retVal = Dashboard();
         break;
       default:
     }
-    return retVal!;
+    return retVal;
   }
 }

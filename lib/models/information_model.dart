@@ -2,69 +2,75 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Information extends ChangeNotifier {
   String informationId;
-  String informationName;
   String about;
   String price; //optional
-  String informationDescription;
-  Map informationReviews;
-  String ownerId;
-  String ownerName;
-  String informationCategory;
-  String informationDetails;
-  String informationComments;
-  String informationImage;
-  String forWhat;
-  String informationVideoUrl;
+  String description;
+  Map reviews;
+  String postId;
+  bool isPrivate;
+  String category;
+  Map comments;
+  String firstName;
+  String lastName;
+  String userUid;
+  String videoUrl;
+  String lookingFor;
   bool upvote;
   bool downvote;
   Timestamp createdAt;
 
+  VideoPlayerController controller;
+// YoutubePlayerController _controller;
   Information(
-      {required this.price,
-      required this.about,
-      required this.informationCategory,
-      required this.informationComments,
-      required this.ownerId,
-      required this.ownerName,
-      required this.forWhat,
-      required this.informationId,
-      required this.informationDescription,
-      required this.informationDetails,
-      required this.informationImage,
-      required this.informationName,
-      required this.downvote,
-      required this.upvote,
-      required this.informationReviews,
-      required this.informationVideoUrl,
-      required this.createdAt});
+      {this.price,
+      this.lookingFor,
+      this.category,
+      this.isPrivate,
+      this.comments,
+      this.firstName,
+      this.lastName,
+      this.userUid,
+      this.postId,
+      this.description,
+      this.informationId,
+      this.about,
+      this.downvote,
+      this.upvote,
+      this.reviews,
+      this.videoUrl,
+      this.createdAt});
 
   Map<String, dynamic> toMap() {
     return {
-      'serviceId': informationId,
-      'informationName': informationName,
+      'informationId': informationId,
       'about': about,
-      'information_image': informationImage,
+      'looking_for': lookingFor,
       'price': price,
-      'information_description': informationDescription,
-      'information_reviews': informationReviews,
-      'for_what': forWhat,
-      'owner_id': ownerId,
+      'description': description,
+      'user_uid': userUid,
+      'first_name': firstName,
+      'last_name': lastName,
+      'reviews': reviews,
+      'post_id': postId,
       'upvote': upvote,
+      'is_private': isPrivate,
       'downvote': downvote,
-      'information_comments': informationComments,
-      'information_category': informationCategory,
-      'information_details': informationDetails,
+      'comments': comments,
+      'category': category,
       'created_at': createdAt,
-      'information_video_url': informationVideoUrl,
+      'video_url': videoUrl,
     };
   }
 
   factory Information.fromMap(Map<String, dynamic> map) {
-    // if (map != null)
-    Timestamp? _createdAt;
+    Timestamp _createdAt;
+
+    if (map == null) return null;
     if (map['created_at'] is Timestamp) {
       _createdAt = map['created_at'];
     } else if (map['created_at'] is Map) {
@@ -74,26 +80,50 @@ class Information extends ChangeNotifier {
 
     return Information(
       informationId: map['information_id'],
-      informationName: map['information_name'],
-      informationDetails: map['information_details'],
-      informationImage: map['information_image'],
-      forWhat: map['for_what'],
       about: map['about'],
+      lookingFor: map['looking_for'],
       price: map['price'],
-      informationDescription: map['information_description'],
-      informationCategory: map['information_category'],
+      description: map['description'],
+      isPrivate: map['is_private'],
+      firstName: map['first_name'],
+      lastName: map['last_name'],
+      userUid: map['user_uid'],
+      category: map['category'],
       upvote: map['upvote'],
       downvote: map['downvote'],
-      informationReviews: map['information_reviews'],
-      ownerId: map['owner_id'],
-      ownerName: map['owner_name'],
-      informationComments: map['information_comments'],
-      informationVideoUrl: map['information_video_url'],
-      createdAt: _createdAt!,
+      reviews: map['reviews'],
+      postId: map['post_id'],
+      comments: map['comments'],
+      videoUrl: map['video_url'],
+      createdAt: _createdAt,
     );
   }
 
+  factory Information.fromDocument(DocumentSnapshot doc) {
+    return Information(
+        informationId: doc.data()['information_id'],
+        postId: doc.data()['post_id'],
+        about: doc.data()['about'],
+        description: doc.data()['description'],
+        isPrivate: doc.data()['is_private'],
+        firstName: doc.data()['first_name'],
+        lastName: doc.data()['last_name'],
+        userUid: doc.data()['user_uid'],
+        category: doc.data()['category'],
+        videoUrl: doc.data()['videoUrl'],
+        comments: doc.data()['comments'],
+        upvote: doc.data()['upvote'],
+        downvote: doc.data()['downvote'],
+        lookingFor: doc.data()['looking_for'],
+        createdAt: doc.data()['createdAt']);
+  }
+
   String toJson() => json.encode(toMap());
+  Future loadController() async {
+    controller = VideoPlayerController.network(videoUrl);
+    await controller.initialize();
+    controller.setLooping(true);
+  }
 
   factory Information.fromJson(String source) =>
       Information.fromMap(json.decode(source));
